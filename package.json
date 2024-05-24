@@ -1,0 +1,33 @@
+{
+  "name": "iptrackerbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slaapyhoofd/iptrackerbot.git"
+  },
+  "keywords": [
+    "home",
+    "ip",
+    "tracker",
+    "bot",
+    "telegram"
+  ],
+  "author": "slaapyhoofd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slaapyhoofd/iptrackerbot/issues"
+  },
+  "homepage": "https://github.com/slaapyhoofd/iptrackerbot#readme",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "node-telegram-bot-api": "^0.66.0",
+    "public-ip": "^6.0.2"
+  }
+}
