@@ -14,10 +14,10 @@ const bot = new TelegramBot(botToken, {polling: true});
 let currentIp = '';
 
 cron.schedule('*/5 * * * *', async () => {
-    console.log(currentIp);
-
     if (lastIp !== '' && lastIp !== currentIp) {
-        bot.sendMessage(chatId, `IP address has changed from ${lastIp} to ${currentIp}`);
+        const message = `IP address has changed from ${lastIp} to ${currentIp}`;
+        console.log(message);
+        bot.sendMessage(chatId, message);
     }
 
     lastIp = currentIp;
@@ -30,5 +30,7 @@ bot.onText(/\/ip/, async (msg) => {
 
 publicIpv4().then(ip => {
     currentIp = ip;
-    bot.sendMessage(chatId, `iptrackerbot online on ${currentIp}!`);
+    const message = `iptrackerbot online on ${currentIp}!`;
+    console.log(message);
+    bot.sendMessage(chatId, message);
 });
